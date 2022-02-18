@@ -8,7 +8,9 @@ const App = () => {
   const [search, setSearch] = useState("");
 
   useEffect(() => {
-    fetch(`http://www.omdbapi.com/?apikey=6fe4deda&s=${search}`)
+    fetch(
+      `http://www.omdbapi.com/?apikey=${process.env.REACT_APP_API_KEY}&s=${search}`
+    )
       .then((response) => response.json())
       .then((data) => {
         setMovies(data.Search);
@@ -20,12 +22,10 @@ const App = () => {
     setSearch(data);
   };
   return (
-    <div className="">
-      <div className="">
-        <Header movies={movies} updateSearch={updateSearch} />
-        <MovieList movies={movies} />
-      </div>
-    </div>
+    <>
+      <Header movies={movies} updateSearch={updateSearch} />
+      <MovieList movies={movies} />
+    </>
   );
 };
 
