@@ -6,7 +6,7 @@ import useStyles from "./styles";
 const Header = ({ movies, updateSearch }) => {
   const classes = useStyles();
   return (
-    <AppBar position="static">
+    <AppBar position="static" style={{ marginBottom: "15px" }}>
       <Toolbar className={classes.toolbar}>
         <Typography variant="h5" className={classes.title}>
           IMDb
