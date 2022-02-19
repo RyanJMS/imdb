@@ -2,12 +2,14 @@ import React, { useState, useEffect } from "react";
 import MovieList from "./components/MovieList/MovieList";
 import "./App.css";
 import Header from "./components/Header/Header";
+import MovieInfo from "./components/MovieInfo/MovieInfo";
 
 const App = () => {
   const [movies, setMovies] = useState([]);
   const [search, setSearch] = useState("");
   const [plots, setPlots] = useState([]);
   const [timeoutId, updateTimeoutId] = useState();
+  const [selectedMovie, setSelectedMovie] = useState();
 
   const fetchData = (searchString) => {
     fetch(
@@ -27,10 +29,22 @@ const App = () => {
     updateTimeoutId(timeout);
   };
 
+  console.log(selectedMovie);
+
   return (
     <>
       <Header movies={movies} onTextChange={onTextChange} />
-      <MovieList plots={plots} movies={movies} />
+      {selectedMovie && (
+        <MovieInfo
+          selectedMovie={selectedMovie}
+          setSelectedMovie={setSelectedMovie}
+        />
+      )}
+      <MovieList
+        plots={plots}
+        movies={movies}
+        setSelectedMovie={setSelectedMovie}
+      />
     </>
   );
 };

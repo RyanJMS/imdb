@@ -8,13 +8,13 @@ import {
   Typography,
 } from "@material-ui/core";
 
-const MovieList = ({ movies, plots }) => {
+const MovieList = ({ movies, plots, setSelectedMovie }) => {
   console.log(plots);
   return (
     <Box sx={{ flexGrow: 1 }}>
       <Grid container spacing={2} justify="center">
         {movies?.map((movie, index) => (
-          <Grid item xs="auto">
+          <Grid item xs="auto" onClick={() => setSelectedMovie(movie.imdbID)}>
             <Card
               elevation={6}
               style={{
