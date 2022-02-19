@@ -14,7 +14,14 @@ const MovieList = ({ movies, plots, setSelectedMovie }) => {
     <Box sx={{ flexGrow: 1 }}>
       <Grid container spacing={2} justify="center">
         {movies?.map((movie, index) => (
-          <Grid item xs="auto" onClick={() => setSelectedMovie(movie.imdbID)}>
+          <Grid
+            item
+            xs="auto"
+            onClick={() => {
+              setSelectedMovie(movie.imdbID);
+              window.scrollTo(0, 0);
+            }}
+          >
             <Card
               elevation={6}
               style={{
