@@ -3,7 +3,7 @@ import { AppBar, Toolbar, Typography, Box, InputBase } from "@material-ui/core";
 import SearchIcon from "@material-ui/icons/Search";
 import useStyles from "./styles";
 
-const Header = ({ movies, updateSearch }) => {
+const Header = ({ movies, onTextChange }) => {
   const classes = useStyles();
   return (
     <AppBar position="static" style={{ marginBottom: "15px" }}>
@@ -24,7 +24,7 @@ const Header = ({ movies, updateSearch }) => {
               placeholder="Search..."
               classes={{ root: classes.inputRoot, input: classes.inputInput }}
               movies={movies}
-              onChange={(event) => updateSearch(event)}
+              onChange={(event) => onTextChange(event)}
             />
           </div>
         </Box>

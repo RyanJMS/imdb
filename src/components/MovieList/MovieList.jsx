@@ -8,7 +8,8 @@ import {
   Typography,
 } from "@material-ui/core";
 
-const MovieList = ({ movies }) => {
+const MovieList = ({ movies, plots }) => {
+  console.log(plots);
   return (
     <Box sx={{ flexGrow: 1 }}>
       <Grid container spacing={2} justify="center">
@@ -35,6 +36,7 @@ const MovieList = ({ movies }) => {
                 <Typography gutterBottom variant="body1">
                   {movie.Year}
                 </Typography>
+                <Typography gutterBottom variant="body2"></Typography>
               </CardContent>
             </Card>
           </Grid>
