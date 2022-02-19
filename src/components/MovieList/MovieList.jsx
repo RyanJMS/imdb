@@ -13,7 +13,7 @@ const MovieList = ({ movies }) => {
     <Box sx={{ flexGrow: 1 }}>
       <Grid container spacing={2} justify="center">
         {movies?.map((movie, index) => (
-          <Grid item xs="auto" sm={6} md={4} lg={3}>
+          <Grid item xs="auto">
             <Card
               elevation={6}
               style={{
