@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/main.409e9de3.css","mappings":"AAAA,KACE,kBACF,CAEA,gBAGE,kBAAmB,CADnB,gBAAiB,CADjB,eAGF","sources":["App.css"],"sourcesContent":["body {\r\n  background: #141414;\r\n}\r\n\r\n.movie-app > .row {\r\n  overflow-x: auto;\r\n  flex-wrap: nowrap;\r\n  flex-direction: row;\r\n}\r\n"],"names":[],"sourceRoot":""}
