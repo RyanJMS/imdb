@@ -9,7 +9,7 @@ const App = () => {
 
   useEffect(() => {
     fetch(
-      `http://www.omdbapi.com/?apikey=${process.env.REACT_APP_API_KEY}&s=${search}`
+      `https://www.omdbapi.com/?apikey=${process.env.REACT_APP_API_KEY}&s=${search}`
     )
       .then((response) => response.json())
       .then((data) => {
