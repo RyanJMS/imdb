@@ -13,6 +13,7 @@ const App = () => {
     )
       .then((response) => response.json())
       .then((data) => {
+        console.log(data);
         setMovies(data.Search);
       });
   }, [search]);
