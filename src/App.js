@@ -17,7 +17,6 @@ const App = () => {
     )
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
         setMovies(data.Search);
       });
   };
@@ -28,8 +27,6 @@ const App = () => {
     const timeout = setTimeout(() => fetchData(event.target.value), 500);
     updateTimeoutId(timeout);
   };
-
-  console.log(selectedMovie);
 
   return (
     <>
